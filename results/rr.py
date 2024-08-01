@@ -1,0 +1,1012 @@
+from selenium import webdriver
+import time
+import xlsxwriter
+
+reg='R20'
+p='''DDDGN
+    WRJBS
+    UUTHI
+    XBKBD
+    EQXIT
+    GQWOC
+    GCOKD
+    ORPGP
+    UICSO
+    ISYFQ
+    XMFLN
+    XCQTE
+    IMHUP
+    XGNOD
+    VYERV
+    UTPGO
+    EEHXH
+    ECWJS
+    CTXTX
+    KKUSK
+    KLJHG
+    XBSYB
+    WVJYH
+    QPFOA
+    EKKXD
+    IHNHO
+    CEPSG
+    UFKYF
+    PJLPL
+    SOFBH
+    WSLYC
+    OFJQA
+    IWFGK
+    KTLOG
+    PXPIL
+    LUJHN
+    XDLOA
+    SLMYF
+    LLEAX
+    MPMIF
+    BDKOW
+    AGMMI
+    KQIEL
+    CKBDA
+    SYFQM
+    PBTQD
+    OHXMM
+    INWTO
+    VEVSG
+    XTPVU
+    XOTUI
+    UWAVN
+    EWAMQ
+    RDLRL
+    ELWGD
+    DJRYT
+    LUFLT
+    AVQUB
+    TOGGB
+    OWXFK
+    DLJYG
+    DVOXH
+    WVUQY
+    AMPAQ
+    QGKHB
+    RSNNJ
+    ARYMY
+    YLUQM
+    PANJB
+    JMORM
+    SUHBM
+    VSPHF
+    RHMJS
+    QBHWK
+    POFKM
+    UGBMA
+    FOEPP
+    XBOID
+    VTDEM
+    LOKDS
+    CVRVO
+    VUAEL
+    UXCJW
+    YYOVG
+    TLPTN
+    PMWVO
+    ONBKU
+    HOMTT
+    OTTNJ
+    HJRQG
+    YRYWR
+    YORWF
+    EQVNF
+    VFQHB
+    RGSDK
+    KPUVM
+    KMOLA
+    VEMVQ
+    EFQHY
+    VDFNS
+    BLSQE
+    WAYBX
+    QKOTO
+    NOJDS
+    MFUNK
+    ALPCP
+    BCDTD
+    CCTSG
+    AMXWR
+    SLUSI
+    TRSWN
+    HONPS
+    NWQSO
+    WYNNL
+    DAMHP
+    DLWMO
+    JTGDM
+    AXWJO
+    LLNDG
+    WTFHX
+    RDSBO
+    LAMGX
+    VQPBJ
+    SFUCS
+    FUPJE
+    EPJYE
+    YEAAK
+    HEYNJ
+    MHQLF
+    UBEFU
+    IOIAW
+    JGIHP
+    HLKQY
+    OHGXK
+    LTGKQ
+    YHBKO
+    UDKEA
+    CTOUB
+    GPUXK
+    RMKPT
+    IXTBM
+    FFHBR
+    UJOPL
+    OFWHI
+    GJGBH
+    AYINU
+    LUPIF
+    OIEHG
+    TVALV
+    PEVWM
+    FFAME
+    KGAJS
+    LAGEX
+    GNJCQ
+    QRETS
+    MDGSJ
+    QYJMB
+    AWADO
+    RXWPD
+    OJLND
+    NTRSH
+    OIDVG
+    XTGFR
+    BSGIF
+    SGQTT
+    AUSGG
+    MORYR
+    LEHTJ
+    AGAVR
+    GVHDF
+    BNKUP
+    UWQQA
+    RRCUH
+    QELOJ
+    OWFEM
+    GAWCN
+    EMFBA
+    FXIGW
+    AJQES
+    VDLLP
+    HMYVX
+    SLLDV
+    IBQFX
+    XIBUH
+    HLCAA
+    XICVE
+    SDGSP
+    YUDIL
+    FNEFL
+    GBLKB
+    BTFDM
+    KQFYG
+    KPCKA
+    PTUAH
+    GJGUQ
+    VSIKC
+    KOCUE
+    FNOJS
+    BIKWH
+    AMLRB
+    LEGGM
+    WEHAG
+    TQVXG
+    FWFTY
+    JEFSQ
+    RXPND
+    MVMGR
+    QHEST
+    CSNNR
+    GIAJL
+    ELSOB
+    XINRV
+    DTFXC
+    IXPTV
+    WMOYN
+    EIXCR
+    YTXAP
+    EBTBB
+    LVWEM
+    FNGXC
+    CYTBG
+    TSJJP
+    KLKJT
+    EBEIV
+    VGENK
+    AKXNA
+    XHDXA
+    TWPPL
+    FKJRA
+    NXFEM
+    FROHJ
+    OCIOC
+    JECWQ
+    DJGTQ
+    XJNRA
+    LVBED
+    FSWPN
+    HETYS
+    EXWGC
+    JAPTJ
+    LFFXT
+    MFJHD
+    SNGKU
+    XEYVQ
+    HOMXR
+    QAVRH
+    TKACG
+    AJKBP
+    REPYR
+    YQTQX
+    EFPQK
+    CDXEE
+    ACFEJ
+    FTRJX
+    BGELB
+    RHXOS
+    VEGIB
+    PUBUB
+    MWUKX
+    BNQPU
+    WTTAK
+    TVNNR
+    PXTFS
+    WEWBD
+    WPWNX
+    LKHXF
+    TOHTJ
+    RFJMD
+    BGDTN
+    BLQRX
+    LHEMR
+    EBCEC
+    LGRNG
+    UWPPQ
+    TJHBA
+    UGFLU
+    DPFAB
+    IDORL
+    QBTNH
+    IPHQS
+    KEMLM
+    PNCUM
+    KDSAH
+    VUKOH
+    PJDMQ
+    CMBMU
+    LERSX
+    ITFHN
+    JBFLK
+    HROOV
+    ANVPA
+    FUMWM
+    EHULT
+    LPGIC
+    SWBPU
+    GCUCI
+    CYGES
+    VWLIS
+    OVSCU
+    FXJGF
+    YEBCB
+    HEYBN
+    OWYDS
+    JEKPO
+    YWLMA
+    RVAHN
+    WOGRL
+    HXTQM
+    QKOUB
+    RDAFM
+    WFAAI
+    WXWDL
+    FLIVF
+    UUWYR
+    OPRAR
+    WAKWR
+    BDEVN
+    JQPKX
+    JOIOC
+    JIHBO
+    PVVDN
+    OOQNN
+    AOQGP
+    HDISX
+    IIINC
+    JBDNM
+    PFSMQ
+    MUESM
+    OYGOE
+    ITMKO
+    SBKBT
+    XYFYB
+    TIXAE
+    GEQGL
+    LDITI
+    NGLNQ
+    AYVTO
+    QNNVA
+    HEKJH
+    TCFIA
+    CDQOA
+    QMMVC
+    AWKMW
+    NQBYW
+    VQAFB
+    XKIDT
+    EUPMY
+    ARIMO
+    EFILW
+    ITGAC
+    TOFLB
+    BEDMO
+    NGQNE
+    LJGBO
+    XBFAG
+    EUDMP
+    SWIAA
+    RLPJP
+    RVBXL
+    JIMBA
+    USLMT
+    CPOIH
+    LWVPL
+    KMGUI
+    PBVMB
+    BPUYU
+    NKBDU
+    JIDML
+    HOPHV
+    GUQMK
+    GSLVA
+    YVBYD
+    FVMTG
+    PHIKS
+    GPPES
+    WIQHC
+    SAKQI
+    OFCLR
+    NFLLK
+    GACJJ
+    YFBNL
+    AYSKR
+    MRTBX
+    CFEKM
+    BEJOD
+    MBSFX
+    MWXDS
+    KLPOI
+    PHGJO
+    JDDES
+    IRRXC
+    JTYME
+    HHIWQ
+    WHPTK
+    XMDGL
+    SBBXN
+    VNLKK
+    DICQL
+    KOGTJ
+    MEGWQ
+    EIFEF
+    JWCNB
+    DBXAF
+    TVRGP
+    XXNAA
+    JHKAG
+    XHUAP
+    JEKAD
+    PNYUE
+    QXIKS
+    SFNXE
+    WLMEF
+    DNIKM
+    EAVMI
+    TMPXI
+    WSHYH
+    JBLIK
+    GSBWW
+    BHFGJ
+    OJSJB
+    OFHHQ
+    TNKEY
+    PEAJJ
+    MSAFX
+    JPYGB
+    EEMMV
+    NTRYN
+    DDAVP
+    FIONH
+    POGFM
+    JHACB
+    XPLJT
+    JUEBH
+    UHCWN
+    XYLDI
+    CLKQP
+    AKBJQ
+    LDOPK
+    JSFOV
+    IOTAC
+    LSMIN
+    HOPOK
+    TUDDQ
+    YDRWV
+    ASXER
+    SLTXT
+    QEDYO
+    DHIHM
+    TDULB
+    USMXN
+    TVTQQ
+    KGRMQ
+    NQSMB
+    WXFYP
+    QUVGS
+    DGUER
+    JWHJV
+    YWSMG
+    MNEIN
+    GBRIR
+    ATXWD
+    UHUFL
+    DPBXM
+    VFXUL
+    DGFEP
+    EYPOJ
+    DROIX
+    SXRPM
+    PQMTD
+    PEXKJ
+    SHOPJ
+    KYPQR
+    NRDNL
+    JODCQ
+    OECOQ
+    LKROK
+    JHNUL
+    RBMUL
+    FALWG
+    MEGFQ
+    YNJYF
+    KNLEF
+    GIHNY
+    HYTCW
+    JCSPM
+    CYWLR
+    SXEMF
+    QONHA
+    IMNSU
+    KIGVC
+    TQWCD
+    MDYYV
+    EKNHL
+    LBIYY
+    WRPSU
+    SSBCP
+    KEGAY
+    SGTYP
+    QLBUD
+    YJJVC
+    KJYWB
+    GKLUB
+    QQAXN
+    DOAJP
+    AYFBJ
+    UUPBD
+    BYXDX
+    DCQOK
+    CUMVJ
+    TUKKN
+    QKRNP
+    KXTDK
+    AAMUW
+    KGJQC
+    DGYBT
+    IAQWO
+    PLMTJ
+    JHNLQ
+    GOAKK
+    GVSFX
+    YHSCL
+    RSLSH
+    GSYBJ
+    HKPKV
+    JAFFY
+    MNDEH
+    SGQET
+    IUAEU
+    QXRDL
+    YNFGE
+    MORQJ
+    FLOGW
+    AXIRG
+    GSAPS
+    UVGTB
+    GMVNY
+    SLJHP
+    YTTIR
+    STMDA
+    GBJRO
+    EGRQV
+    GYUHI
+    CMYNQ
+    KKRKQ
+    OYIYR
+    MPXXM
+    SUQFY
+    ABDJA
+    KAKPJ
+    OITIV
+    KBNAY
+    VKFMS
+    LENUV
+    IHIVI
+    DNVUI
+    VMABS
+    JYFUG
+    IYDDI
+    XLIRA
+    HFYMC
+    PEGIY
+    DRUDD
+    DSWBJ
+    PTDBF
+    URRSE
+    AGUEG
+    AHMIC
+    VFDKN
+    SCIKK
+    QFPWU
+    FCFRV
+    QQIWM
+    LKNJF
+    CRBXX
+    EVEGP
+    MYHHS
+    AOKVC
+    MTPHO
+    AVIGQ
+    NLTVV
+    JILRL
+    YFVMB
+    QLFSF
+    GTIIJ
+    MJUGK
+    PACQT
+    EOXET
+    PKSLM
+    DQGCL
+    PBYGR
+    KXAHI
+    ENKVD
+    OJOYJ
+    VIOTJ
+    OBITR
+    UAKCG
+    RXAJE
+    RNKPD
+    HGLUC
+    XGUUC
+    SAOSV
+    LIIGO
+    EXSSP
+    RDNFU
+    AXDBQ
+    SIEBJ
+    SDFKM
+    PPTIE
+    AWOFP
+    UDSGG
+    FIEFM
+    PNKEU
+    OBDPQ
+    EGFOS
+    YRRGW
+    AODWB
+    SPXID
+    FEXJR
+    NFQXI
+    VSCRU
+    BPURL
+    WMNIN
+    DAPHM
+    QPPMG
+    LBSLX
+    WSMYN
+    FOTMP
+    QMQYY
+    WNMHD
+    KOWGC
+    LHBNQ
+    MKDKW
+    YQHFB
+    QCWOP
+    MRRYX
+    HELDS
+    LJTSV
+    FLBHA
+    EPORH
+    NGGHH
+    HDCJX
+    NEMSJ
+    PIJGV
+    ULTAY
+    GMOJA
+    XAJHV
+    BKYKC
+    WVFUX
+    JRXEY
+    BXYMY
+    ACIMW
+    UHSRY
+    OOWOB
+    QYHOK
+    TBHTM
+    WMYKB
+    TSAQA
+    OOHQH
+    RLWFE
+    EVLLQ
+    YXWBO
+    RBBMP
+    EHDEK
+    DVQYJ
+    RYRDF
+    WPYLO
+    FSJOY
+    HTUNB
+    JVAOY
+    RSUWW
+    LWCGM
+    UGJHM
+    KTHVN
+    UCTDC
+    AJOPS
+    UWATV
+    RHSML
+    PSKLG
+    QOEBA
+    NHGAM
+    CTYSK
+    RRCTN
+    NMQTV
+    UNHMX
+    RVRKJ
+    IYJEG
+    UMIIB
+    UKTXR
+    NUVXG
+    ORNLJ
+    XIAKD
+    GDVCM
+    VHGVF
+    QXDRW
+    QALDL
+    RDRAN
+    LMBSO
+    NVATM
+    LFOTL
+    THCJB
+    HETYY
+    AFIYA
+    XQJFC
+    MDLCT
+    GOBOV
+    IHEOD
+    QINDD
+    ILPBE
+    MVPRU
+    XDGUQ
+    BJBNW
+    QVPJA
+    ANWUI
+    KFGIC
+    GYLGR
+    NVJQL
+    AIMNQ
+    JPVVM
+    FJUYE
+    KTYIF
+    WILNX
+    SUBSH
+    CNBLW
+    KBXXM
+    VIQPY
+    SRBLN
+    SEDCM
+    HKWFD
+    KFXBC
+    IBEKE
+    SKWXI
+    LDNUS
+    NCCPH
+    YFWVA
+    QONEM
+    NCQHD
+    OOWBL
+    RONLF
+    AXGDS
+    LIAAD
+    YIHXD
+    KCRDK
+    IYGFP
+    PXBQG
+    IMWGG
+    VGODX
+    YSQMR
+    QSTCH
+    OSKYO
+    GHMOM
+    ASWHI
+    FMGLO
+    FMRUP
+    LNAVJ
+    XVSVU
+    AAKOF
+    VLCBM
+    ECQCA
+    QUUGJ
+    NQVKA
+    TEKVE
+    IDHXO
+    MTVPQ
+    MEGFQ
+    TMCOD
+    FEJGE
+    GXLSG
+    HCGKO
+    MSDGM
+    GOTEV
+    VPDIH
+    ANQRW
+    SUWSL
+    OBVWL
+    LNKJE
+    YMDNA
+    KJLFJ
+    JBYDM
+    FTWCI
+    SGVLB
+    MURKC
+    AQECH
+    ECFLY
+    BCYHS
+    YYJLT
+    MBGKC
+    FKKIM
+    WQACS
+    SAAWW
+    DPLNJ
+    WDYCV
+    UKRIB
+    NRPIL
+    UIAEY
+    EEQNC
+    TOKWW
+    GPWAE
+    GXPPW
+    UBYOC
+    HDAYQ
+ORJVO
+UDCYN
+WCRCK
+WUQOJ
+KNBNW
+HLGOC
+MSKNW
+YNBTX
+ERLKK
+HLRUS
+MVKHC
+UUQOP
+IJEUC
+EIBUG
+VINEK
+XICDI
+GUUKJ
+LICQN
+FTTCU
+UCDYG
+QUBYM
+PONXX
+BLVYS
+QXGAO
+UHHSV
+DBCHR
+LYHSL
+CUOLJ
+HAUHA
+SVNOE
+OHSNC
+RBRYM
+BPECU
+DOCUL
+GSYSX
+LQEUD
+MOJQS
+USVRR
+NPHMH
+SRHSR
+PTUJO
+BANSM
+OJQCX
+OVMYN
+OGRTR
+QNOIW
+OUMTK
+KTLHO
+OXACS
+ULBPI
+TUDUD
+UWLPJ
+RLHNS
+SWPXJ
+FAREY
+KJUDL
+NLKMV
+BSLNW
+TRCVH
+BVQSI
+MKIHE
+XVRSG
+MMDVP
+PMKNX
+PYUNS
+QMLCV
+XQAML
+EOIII
+RREFA
+APMYW
+ORIBL
+UPTPY
+CAJBA
+OOMJF
+EYMOJ
+TVRYB
+WAOVG
+OLLTK
+MMTQX
+EGWLB
+LSHNJ
+OGWEE
+PVVOR
+PCEJO
+BVCGO
+DGWNC
+CFQDN
+MVGDH
+QUNIW
+FEBCI
+JUTIQ
+OTMVX
+YIEPP
+KJYYO
+IJELW
+DLJRV
+QWNSF
+LHLRJ
+LDOPH
+DXCEE
+HUYOJ
+MPPVS
+RXSRK
+KMEFT
+UXCVB
+URYDF
+NBRUE
+PJQTM
+JFRMU
+KYBNS
+JAJOC
+ICDUU
+PBLLF
+TPYLR
+EQEHN
+KEQHI
+XGOVH
+WIVLQ
+IXYFN
+MDEEL
+FFNAH
+GQNFH
+TCLFC
+WJEEW
+KDGLD
+VAHIR
+PLJKV
+YKFNR
+BWYHN
+GCSES
+DOKXH
+NWOKP
+QSJGM
+TQAQG
+TRESA
+MWFYU
+QHIGC
+VWQCM
+PIYIN
+GJCGS
+ARLJY
+CVNER
+ECMUX
+WUDSH
+MUFBJ
+WVAVT
+UVLKF
+QNSEV
+EVKHD
+XNDOD'''
+l = p.split()
+
+
+workbook=xlsxwriter.Workbook('E2sem2.xlsx')
+worksheet=workbook.add_worksheet('1')
+worksheet.write(0,0,'RANK')
+worksheet.write(0,2,'AVERAGE')
+workbook.close()
+
+url = 'http://210.212.217.214/'
+driver = webdriver.Chrome('chromedriver.exe')
+driver.get(url)
+
+for i in range(201,1112):
+        password=l[i-201]
+        a=str(i)
+        id=reg+('0'*(4-len(a))+a)
+        user = id
+        pas = password
+        print(password)
+
+
+        try:
+
+            driver.find_element('name', 'username').send_keys(user)
+            driver.find_element('name', 'password').send_keys(pas)
+            driver.find_element('name', 'login').click()
+            #time.sleep(1)
+
+            name = driver.find_element('xpath','/html/body/table/tbody/tr[49]/td/div/b').text
+            grade=name
+            print(user,':',grade)
+            workbook=xlsxwriter.Workbook('RANKFINAL6.xlsx')
+            worksheet.write(i,1,user)
+            worksheet.write(i,2,grade)
+            workbook.close()
+            driver.get('http://210.212.217.214/Logout.php')
+
+        except:
+            try:
+
+                name = driver.find_element('xpath','/html/body/table/tbody/tr[57]/td/div/b').text
+                grade = name
+                print(user, ':', grade)
+                workbook=xlsxwriter.Workbook('RANKFINAL6.xlsx')
+                worksheet.write(i, 1, user)
+                worksheet.write(i, 2, grade)
+                workbook.close()
+                driver.get('http://210.212.217.214/Logout.php')
+            except:
+                print(user, ':', "ERROR")
+                workbook=xlsxwriter.Workbook('RANKFINAL6.xlsx')
+                worksheet.write(i, 1, user)
+                worksheet.write(i, 2, 'ERROR')
+                workbook.close()
+                driver.get('http://210.212.217.214/Logout.php')
+                
